@@ -38,3 +38,15 @@ gem 'jquery-rails'
 # gem 'debugger'
 #
 gem 'devise'
+
+group :test do
+  gem 'capybara'
+  gem 'rb-fsevent'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
