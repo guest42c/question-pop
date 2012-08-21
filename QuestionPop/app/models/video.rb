@@ -1,9 +1,10 @@
 class Video < ActiveRecord::Base
   has_many :questions
+  belongs_to :user
+  attr_accessible :description, :title, :url, :user_id
 
-  attr_accessible :description, :title, :url
-
-  validates :url, :presence => true
+  validates :url, presence: true
+  validates :user, presence: true
 
 
 end
